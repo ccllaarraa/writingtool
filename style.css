@@ -1,7 +1,12 @@
+@font-face {
+	font-family: 'delius';
+	src: url('./fonts/Delius-Regular.ttf') format('truetype');
+}
 body::-webkit-scrollbar {
   display: none;
 }
 body {
+  font-family: 'delius', Arial, Helvetica, sans-serif;
   margin: 0px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -11,10 +16,121 @@ body {
   user-select: none;
 }
 
-textarea {
-  width: 100vw;
-  height: 90vh;
+#output {
+  position: fixed;
+  top: 0;
+  width: calc(100vw - 200px);
+  min-height: 100vh;
   color: transparent;
   border-color: transparent;
   caret-color: red;
+  border: none;
+  overflow: auto;
+  outline: none;
+  padding: 100px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none; /*remove the resize handle on the bottom right*/
+}
+#starthere {
+  background-color: transparent;
+  caret-color: red;
+  border: none;
+  overflow: auto;
+  outline: none;
+  padding: 100px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none; /*remove the resize handle on the bottom right*/
+  position: fixed;
+  top: 0;
+  width: calc(100vw - 200px);
+  display: flex;
+  cursor: text;
+  color: grey;
+  height: 100vh;
+}
+.blinking {
+  margin-left: 5px;
+  height: 17px;
+  width: 1px;
+  background-color: red;
+  animation: blink-animation 1s steps(3, start) infinite;
+  -webkit-animation: blink-animation 1s steps(3, start) infinite;
+}
+.inactive {
+  display: none;
+  opacity: 0;
+  z-index: -1;
+}
+.emailinput {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 10px;
+  right: 60px;
+  width: 245px;;
+}
+.emailprompt {
+  color: #bebebe;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.emailprompt:hover {
+  color: grey;
+}
+#emailID {
+    padding: 5px;
+    background-color: #EBEBEB;
+    border: none;
+    font-family: 'delius', Arial, Helvetica, sans-serif;
+    color: rgb(221, 221, 221);
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+#emailID:hover > .emailprompt {
+  color: grey;
+}
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: white;
+}
+textarea:focus, input:focus{
+  outline: none;
+}
+.buttons {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  height: 26px;
+  border: none;
+  color: white;
+  font-family: 'delius', Arial, Helvetica, sans-serif;
+  background-color: #B4ADAD;
+  cursor: pointer;
+}
+.buttons:hover {
+  background-color: white;
+  color: grey;
+}
+
+
+/* animations */
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }

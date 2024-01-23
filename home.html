@@ -32,20 +32,24 @@
 
 
 <body oncopy="return false" oncut="return false" onpaste="return false">
-    <!-- <div class="live-position"></div> -->
+   
 
 
-    <div class="writing">
-     
-      <form name="contact" method="POST" data-netlify="true" action="/pages/success.html">
-        <label>Your Email: <input type="email" name="email" required/></label>
+            <textarea type="text" id="output" name="" minlength="3" required ></textarea>
+            <div id="starthere">Start writing here… 
+              <div class="blinking"></div>
+            </div>
 
-        <textarea type="text" id="output" name="" minlength="3" required ></textarea>
-        <button type="submit">Submit</button>  
-    </form>
+            <div class="emailinput">
+              <div class="emailprompt">
+                Finished? Send yourself today’s writing here :
+              </div>
+              <input type="email" name="email" id="emailID" placeholder="your email">    
+            </div>
+                
+            <button class="buttons" onclick="sendEmail()">Send</button>
+ 
 
-
-    </div>
 
 
   
