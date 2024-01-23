@@ -1,0 +1,20 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  margin: 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+textarea {
+  width: 100vw;
+  height: 90vh;
+  color: transparent;
+  border-color: transparent;
+  caret-color: red;
+}
