@@ -38,3 +38,40 @@ function sendEmail() {
   window.location = "mailto:" + email + "?subject=" + subject + "&body=" + myLineBreak;
 }
 
+
+
+// change color
+var colors = {
+  1: "#ffffff",
+  2: "#ffffff",
+  3: "#FCAED3",
+  4: "#F3AEFC",
+  5: "#D2AEFC",
+  6: "#AEB1FC",
+  7: "#AED8FC",
+  8: "#AEF3FC",
+  9: "#AEFCED",
+  10: "#AEFCCF",
+  11: "#AEFCB1",
+  12: "#CFFCAE",
+  13: "#EDFCAE",
+  14: "#FCF3AE",
+  15: "#FCE4AE",
+  16: "#FCD5AE",
+  17: "#FCC3AE",
+  18: "#FCAEAE"
+
+};
+
+var colorBox= $(".color-box"),
+ range = $(".input-range"),
+  value = $(".range-value");
+
+value.html(range.attr("value"));
+
+range.on("input", function () {
+  value.html(this.value);
+  var colorIndex = this.value;
+  console.log(colorIndex)
+  $(".color-box").css("background-color", colors[colorIndex] );
+});
