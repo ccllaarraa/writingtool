@@ -1,3 +1,5 @@
+var timeout;
+
 $(document).ready(function() {
 // remove start writing here
 $(function() {                    
@@ -9,6 +11,33 @@ $(function() {
 
 
 
+// clock
+var clara;
+$(".timer").click(function () {
+  $('.timeroff').addClass("flex");
+  $(this).removeClass("flex");
+
+ clara = setTimeout(function(){
+  console.log("settimeout");
+  $("#clockmessage").addClass("block");
+},600000);
+})
+
+$(".timeroff").click(function () {
+  clearInterval(clara);
+ $(this).removeClass('flex');
+ $(".timer").addClass("flex")
+})
+
+$("#clockmessage").click(function () {
+  $(this).addClass("ciao");
+  $(this).removeClass("block");
+  $(".timeroff").removeClass("flex");
+  $(".timer").addClass("flex");
+})
+
+
+
 // end jquery
 });
 
@@ -17,11 +46,18 @@ $(function() {
 // avoid right click
 // document.addEventListener('contextmenu', event => event.preventDefault());
 
+// avoid deleting text
+window.onkeydown = function (event) {
 
+  if (event.which == 8) { 
+       event.preventDefault();   // turn off browser transition to the previous page 
+               // put here code you need 
+      }; 
+
+};   
 // when goes on another tab
 document.addEventListener("visibilitychange", (event) => {
   if (document.visibilityState == "visible") {
-    console.log("back from scratch")
   } else {
       document.getElementById("output").value = "";
   }

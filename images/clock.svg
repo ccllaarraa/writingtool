@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51">
+  <g id="Groupe_1" data-name="Groupe 1" transform="translate(-1849 -9)">
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="51" height="51" transform="translate(1849 9)" fill="#e2e0e0"/>
+    <line id="Ligne_2" data-name="Ligne 2" y2="21" transform="translate(1876.5 14.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="Ligne_3" data-name="Ligne 3" y2="21" transform="translate(1859.456 51.918) rotate(-131)" fill="none" stroke="#707070" stroke-width="1"/>
+    <path id="Tracé_1" data-name="Tracé 1" d="M1878.335,16.561l3.155-4.213,3.022,4.213" transform="translate(-5 2)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Tracé_2" data-name="Tracé 2" d="M1878.335,16.561l3.155-4.213,3.022,4.213" transform="translate(3084.397 1480.105) rotate(-131)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>
