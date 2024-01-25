@@ -55,7 +55,9 @@ $(".close-about").click(function () {
 // document.addEventListener('contextmenu', event => event.preventDefault());
 
 // avoid deleting text
-window.onkeydown = function (event) {
+
+var inputoftext = document.getElementById('output');
+inputoftext.onkeydown = function (event) {
   if (event.which == 8) { 
        event.preventDefault();   // turn off browser transition to the previous page 
                // put here code you need 
