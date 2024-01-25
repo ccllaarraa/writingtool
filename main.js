@@ -37,6 +37,14 @@ $("#clockmessage").click(function () {
 })
 
 
+// about
+$(".about-btn").click(function () {
+  $(".about-ctn").addClass("block");
+})
+
+$(".close-about").click(function () {
+  $(".about-ctn").removeClass("block");
+})
 
 // end jquery
 });
@@ -48,7 +56,6 @@ $("#clockmessage").click(function () {
 
 // avoid deleting text
 window.onkeydown = function (event) {
-
   if (event.which == 8) { 
        event.preventDefault();   // turn off browser transition to the previous page 
                // put here code you need 

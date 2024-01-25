@@ -120,12 +120,12 @@ textarea:focus, input:focus{
   border: none;
   color: white;
   font-family: 'delius', Arial, Helvetica, sans-serif;
-  background-color: #e8b4e6;
+  background-color: #e86be4;
+  opacity: 0.5;
   cursor: pointer;
 }
 .buttons:hover {
-  background-color: white;
-  color: grey;
+ opacity: 1;
 }
 .input-range {
   position: fixed;
@@ -157,6 +157,7 @@ transform-origin: left top;
 /* timer */
 .timer {
   display: none !important;
+  opacity: 0.5;
 }
 .timer , .timeroff{
   position: fixed;
@@ -166,9 +167,10 @@ transform-origin: left top;
     align-items: flex-end;
     cursor: pointer;
     z-index: 2;
+
 }
 .timer:hover {
-  opacity: 0.5;
+  opacity: 1;
 }
 .timer-message {
   font-size: 12px;
@@ -257,7 +259,52 @@ transform-origin: left top;
   }
 }
 
+/* about */
 
+.about-btn {
+  z-index: 2;
+  position: fixed;
+  bottom: 10px;
+  left: 200px;
+  font-size: 12px;
+  color: white;
+  background-color: #7ED38E;
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.about-btn:hover {
+  opacity: 1;
+}
+
+.about-ctn {
+  display: none;
+  width: calc(100vw - 60px);
+  height: calc(100vh - 60px);
+  z-index: 5;
+  position: absolute;
+  margin: 30px;
+  background: #a4eab1;
+  overflow-y: scroll;
+}
+.close-about:before, .close-about:after {
+  background: rgb(45, 45, 45);
+}
+.close-about {
+  position: fixed;
+  right: 10px;
+  padding: 20px;
+  top: 22px;
+}
+.intro-txt {
+  font-size: 15px;
+  max-width: 550px;
+  line-height: 1.6;
+  margin: auto;
+  padding: 100px 0;
+  color: #343434;
+  cursor: text;
+}
 /* custom input */
 
 input[type="range"] {
@@ -336,4 +383,26 @@ input[type="range"]:focus::-moz-range-thumb {
 
 .flex {
   display: flex !important;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #008726; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b8b8b8; 
+}
+
+i {
+  font-style: normal;
+    border-bottom: dotted;
+    line-height: 1px;
 }
