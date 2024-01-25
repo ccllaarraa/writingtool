@@ -75,7 +75,7 @@ document.addEventListener("visibilitychange", (event) => {
 // email
 function sendEmail() {
   var email = document.getElementById("emailID").value;
-  var subject = "Today's writing";
+  var subject = "Tranquil words, today's writing";
   var body = document.getElementById("output").value;
   var myLineBreak = body.replace(/\r\n|\r|\n/g, "%0D%0A");
   window.location = "mailto:" + email + "?subject=" + subject + "&body=" + myLineBreak;

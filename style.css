@@ -403,6 +403,6 @@ input[type="range"]:focus::-moz-range-thumb {
 
 i {
   font-style: normal;
-    border-bottom: dotted;
+    border-bottom: 1.5px dotted #2e2e2e;
     line-height: 1px;
 }
