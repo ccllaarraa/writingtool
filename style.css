@@ -33,6 +33,7 @@ body {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  cursor: text;
   resize: none; /*remove the resize handle on the bottom right*/
 }
 #starthere {
@@ -50,7 +51,7 @@ body {
   top: 0;
   width: calc(100vw - 200px);
   display: flex;
-  cursor: text;
+  cursor: pointer;
   color: grey;
   height: 100vh;
   z-index: 2;
@@ -64,9 +65,9 @@ body {
   -webkit-animation: blink-animation 1s steps(3, start) infinite;
 }
 .inactive {
-  display: none;
+  display: none !important;
   opacity: 0;
-  z-index: -1;
+  z-index: -1 !important;
 }
 .emailinput {
   display: flex;
@@ -405,4 +406,10 @@ i {
   font-style: normal;
     border-bottom: 1.5px dotted #2e2e2e;
     line-height: 1px;
+}
+
+
+
+@media screen and (max-width: 900px) {
+ 
 }
