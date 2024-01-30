@@ -52,10 +52,9 @@ $(".close-about").click(function () {
 
 
 // avoid right click
-// document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 // avoid deleting text
-
 var inputoftext = document.getElementById('output');
 inputoftext.onkeydown = function (event) {
   if (event.which == 8) { 
