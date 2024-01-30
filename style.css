@@ -408,8 +408,54 @@ i {
     line-height: 1px;
 }
 
+.about-mob {
+  display: none;
+}
+
 
 
 @media screen and (max-width: 900px) {
- 
+ #starthere, #output {
+  padding: 30px;
+ }
+ .color-box , .input-range{
+  display: none;
+ }
+ .about-desk {
+  display: none;
+ }
+ .about-mob {
+  display: block;
+ }
+ .timer, .timeroff {
+  display: none !important;
+ }
+ .about-btn {
+  bottom: unset;
+  left: unset;
+  top: 10px;
+  right: 10px;
+ }
+ .emailinput {
+  bottom: 10px;
+  right: 60px;
+  left: 10px;
+  width: calc(100vw - 72px);
+}
+.intro-txt  {
+  padding: 10px;
+  font-size: 12px;
+}
+.about-ctn {
+  width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    z-index: 5;
+    position: absolute;
+    margin: 10px;
+   
+}
+.close-about {
+  top: 0;
+  right: -8px;
+}
 }
