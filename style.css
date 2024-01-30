@@ -418,6 +418,9 @@ i {
  #starthere, #output {
   padding: 30px;
  }
+ #output {
+  width: calc(100vw - 60px);
+ }
  .color-box , .input-range{
   display: none;
  }
@@ -440,7 +443,7 @@ i {
   bottom: 10px;
   right: 60px;
   left: 10px;
-  width: calc(100vw - 72px);
+  width: calc(100vw - 80px);
 }
 .intro-txt  {
   padding: 10px;
