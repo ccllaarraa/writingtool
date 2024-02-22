@@ -20,7 +20,8 @@ $(".timer").click(function () {
  clara = setTimeout(function(){
   console.log("settimeout");
   $("#clockmessage").addClass("block");
-},600000);
+ },600000);
+
 })
 
 $(".timeroff").click(function () {
