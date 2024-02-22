@@ -35,6 +35,7 @@ body {
   box-shadow: none;
   cursor: text;
   resize: none; /*remove the resize handle on the bottom right*/
+  font-size: 27px;
 }
 #starthere {
   background-color: transparent;
@@ -55,10 +56,11 @@ body {
   color: grey;
   height: 100vh;
   z-index: 2;
+  font-size: 27px;
 }
 .blinking {
   margin-left: 5px;
-  height: 17px;
+  height: 34px;
   width: 1px;
   background-color: red;
   animation: blink-animation 1s steps(3, start) infinite;
@@ -293,12 +295,13 @@ transform-origin: left top;
 }
 .close-about {
   position: fixed;
-  right: 10px;
+  left: 37px;
   padding: 20px;
-  top: 22px;
+  bottom: 22px;
+  top: unset;
 }
 .intro-txt {
-  font-size: 15px;
+  font-size: 17px;
   max-width: 550px;
   line-height: 1.6;
   margin: auto;
@@ -417,6 +420,10 @@ i {
 @media screen and (max-width: 900px) {
  #starthere, #output {
   padding: 30px;
+  font-size: 17px;
+ }
+ .blinking {
+  height: 20px;
  }
  #output {
   width: calc(100vw - 60px);
@@ -458,6 +465,7 @@ i {
    
 }
 .close-about {
+  left: unset;
   top: 0;
   right: -8px;
 }
