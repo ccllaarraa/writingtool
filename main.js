@@ -53,7 +53,7 @@ $(".close-about").click(function () {
 
 
 // avoid right click
-document.addEventListener('contextmenu', event => event.preventDefault());
+// document.addEventListener('contextmenu', event => event.preventDefault());
 
 // avoid deleting text
 var inputoftext = document.getElementById('output');
@@ -76,13 +76,24 @@ document.addEventListener("visibilitychange", (event) => {
 
 // email
 function sendEmail() {
-  var email = document.getElementById("emailID").value;
+  // var email = document.getElementById("emailID").value;
   var subject = "Tranquil words, today's writing";
   var body = document.getElementById("output").value;
   var myLineBreak = body.replace(/\r\n|\r|\n/g, "%0D%0A");
-  window.location = "mailto:" + email + "?subject=" + subject + "&body=" + myLineBreak;
+  window.location = "mailto:" + "?subject=" + subject + "&body=" + myLineBreak;
 }
 
+  function openWindow(){
+  var value  = document.getElementById("output").value;
+  var w = window.open();
+  w.document.write('<html><head><title>rreevvveeaal</title>');
+  w.document.write('<link rel="stylesheet" href="style.css">');
+  w.document.write('</head><body class="revealed">');
+  w.document.write('<p>' + value + "</p");
+  w.document.write('</body></html>');
+  w.document.close();
+
+}
 
 
 // change color
