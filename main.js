@@ -86,7 +86,7 @@ function sendEmail() {
   function openWindow(){
   var value  = document.getElementById("output").value;
   var w = window.open();
-  w.document.write('<html><head><title>rreevvveeaal</title>');
+  w.document.write('<html><head><title>r…e…v…e…a…l…e…d</title>');
   w.document.write('<link rel="stylesheet" href="style.css">');
   w.document.write('</head><body class="revealed">');
   w.document.write('<p>' + value + "</p");
