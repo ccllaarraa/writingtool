@@ -9,6 +9,11 @@ $(function() {
   });
 });
 
+$( "body" ).on( "keypress", function() {
+  console.log( "Handler for `keypress` called." );
+  $("#starthere").addClass("inactive"); 
+    $("#starthere").prev("#output").focus().addClass('hello');   
+} );
 
 
 // clock
@@ -53,7 +58,7 @@ $(".close-about").click(function () {
 
 
 // avoid right click
-// document.addEventListener('contextmenu', event => event.preventDefault());
+//  document.addEventListener('contextmenu', event => event.preventDefault());
 
 // avoid deleting text
 var inputoftext = document.getElementById('output');
@@ -83,6 +88,7 @@ function sendEmail() {
   window.location = "mailto:" + "?subject=" + subject + "&body=" + myLineBreak;
 }
 
+//reveal
   function openWindow(){
   var value  = document.getElementById("output").value;
   var w = window.open();
